@@ -1,5 +1,9 @@
 from model import OrderSystem
 from view import show_report, show_payment_status, show_save_status
+from model.Cuenta import OrderSystem
+from model.Descuento import StudentDiscount
+
+
 
 def ejecutar():
     """ 
@@ -18,5 +22,13 @@ def ejecutar():
     show_payment_status(order)
     show_report(order)
     show_save_status(order, order_id)
+    
+    def run():
+        items = [100, 200, 300]  # example products
+        
+        order = OrderSystem(items, StudentDiscount())
+        total = order.calculate_total()
+        print(f"Total con descuento para estudiante: {total}")
+
 
 
