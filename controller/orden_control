@@ -1,0 +1,22 @@
+from model import OrderSystem
+from view import show_report, show_payment_status, show_save_status
+
+def ejecutar():
+    """ 
+    Función principal del controlador.
+    Solicita datos al usuario, crea el modelo y usa la vista para mostrar resultados.
+    """    
+    customer_type = input("Tipo de cliente (regular/vip/employee): ")
+    items = [float(x) for x in input("Ingresa los precios separados por coma: ").split(",")]
+    payment_method = input("Método de pago (card/cash/transfer): ")
+    order_id = 123
+
+    # Crear el modelo
+    order = OrderSystem(customer_type, items, payment_method)
+
+    # Usar la vista para mostrar resultados
+    show_payment_status(order)
+    show_report(order)
+    show_save_status(order, order_id)
+
+
