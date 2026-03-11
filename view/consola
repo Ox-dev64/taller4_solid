@@ -1,0 +1,18 @@
+
+def show_report(order_system):
+    """Muestra el total del pedido en consola."""
+    print(f"El total de tu pedido es: {order_system.calculate_total()}")
+
+def show_payment_status(order_system):
+    """Muestra la orden de pago en la consola"""
+    print(order_system.process_payment())
+
+def show_save_status(order_system, order_id):
+    """Muestra lo que se guardo en la consola"""
+    print(order_system.save_order(order_id))
+    
+def mostrar_total(total):
+    print(f"Total con descuento estudiante: {total}")
+
+
+    

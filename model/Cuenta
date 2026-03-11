@@ -1,0 +1,10 @@
+from model.Descuento import IDiscount
+
+class OrderSystem:
+    def __init__(self, items, discount_strategy: IDiscount):
+        self.items = items
+        self.discount_strategy = discount_strategy
+
+    def calculate_total(self):
+        subtotal = sum(self.items)
+        return self.discount_strategy.apply(subtotal)
