@@ -2,9 +2,10 @@
 archivo Principal  
 se ejecuta el controlador
 """
-from controller.orden_control import ejecutar
+from controller import orden_control
 
-    
 if __name__ == "__main__":
-    ejecutar()
+    orden_control.ejecutar()
+
+
 
